@@ -1,0 +1,26 @@
+{
+  "name": "namasthereact",
+  "version": "1.0.0",
+  "description": "this is basic npm package",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raviteja0209/NamastheReact.git"
+  },
+  "keywords": [
+    "dev",
+    "test"
+  ],
+  "author": "Raviteja Adari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raviteja0209/NamastheReact/issues"
+  },
+  "homepage": "https://github.com/Raviteja0209/NamastheReact#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
