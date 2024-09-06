@@ -1,44 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1", { id: 'headingtag' }, "Hello React Bro !!!")
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(heading)
+//JSX element
+const jxsheader = <span id="head">hello RT from jxs</span>;
 
-//nested elements
-const divele = React.createElement("div", { id: "parent" },
-    React.createElement("div", { id: "child" },
-        React.createElement("h1", { id: "headtag" }, "this is h1")
-    )
-)
-const nesteddiv = ReactDOM.createRoot(document.getElementById("nesteddiv"))
-nesteddiv.render(divele)
+//React functional component
+const Title = () => (
+  <h1>
+    Hello Guru !!!
+    <br></br>
+    {jxsheader}
+  </h1>
+);
 
-//siblings
-const parele = React.createElement("div", { id: "parent1" },
-    React.createElement("div", { id: "child1" },
-        [
-            React.createElement("h1", { id: "headtag1" }, "this is h1"),
-            React.createElement("h2", { id: "headtag2" }, "this is h2")
-        ]
-    )
-)
-const sibdiv = ReactDOM.createRoot(document.getElementById("sibdiv"))
-sibdiv.render(parele)
+const HeaderComponent = () => (
+  <div>
+    <Title />
+    {200 * 300}
+    <h1 className="headingtag">Welcome to react world</h1>
+  </div>
+);
 
-//childsibilings
-const childele = React.createElement("div", { id: "parent1" },
-    [React.createElement("div", { id: "child1" },
-        [
-            React.createElement("h1", { id: "headtag1" }, "this is h1"),
-            React.createElement("h2", { id: "headtag2" }, "this is h2")
-        ]
-    ), React.createElement("div", { id: "child2" },
-        [
-            React.createElement("h1", { id: "headtag3" }, "this is h1"),
-            React.createElement("h2", { id: "headtag4" }, "this is h2")
-        ]
-    )]
-)
-const childdiv = ReactDOM.createRoot(document.getElementById("childdiv"))
-sibdiv.render(childele)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+//root.render(jxsheader);
+
+//render functionalcomponent
+root.render(<HeaderComponent />);

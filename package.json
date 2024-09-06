@@ -4,6 +4,8 @@
   "description": "testing npm",
   "main": "app.js",
   "scripts": {
+    "start" : "parcel index.html",
+    "prodbuild" : "parcel build index.html",
     "test": "test"
   },
   "author": "rt",
